@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Server API</title>
+</head>
+<style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+<body style="background-color:gainsboro;">
+    <div>
+        <!-- Add User -->
+        <div style="padding-left: 10px;">
+            <h2 style="color: black; font-weight: bolder;">Add User</h2>
+            <p style="font-weight: bold; font-size: 14px;"> Name :</p>
+            <input type="text" id="name" style="width: 200px; height: 25px;">
+            <p style="font-weight: bold; font-size: 14px;"> Email Address :</p>
+            <input type="email" id="email" style="width: 200px; height: 25px;">
+            <p style="font-weight: bold; font-size: 14px;"> Address :</p>
+            <input type="text" id="address" style="width: 200px; height: 25px;">
+            <br>
+            <br>
+            <button id="addUser" style="width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">Add</button>
+            <p id="addUserRes" style="font-size: 16px;"></p>
+        </div>
+
+        <!-- See All User -->
+        <div style="margin-top: 40px;padding-left: 10px;">
+            <h2 style="color: black; font-weight: bolder;">View All Users</h2>
+            <button id="searchAllUsers" style="width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">View Users</button>
+            <p id="allUserRes1"></p>
+            <p id="allUserRes2"></p>
+            <p id="allUserRes3"></p>
+            <p id="allUserRes4"></p>
+            <p id="allUserRes5"></p>
+            <p id="allUserRes6"></p>
+        </div>
+
+        <!-- See Individual User -->
+        <div style="margin-top: 40px;padding-left: 10px;">
+            <h2 style="color: black; font-weight: bolder;">Search Individual User</h2>
+            <p style="font-weight: bold; font-size: 12px;"> Enter Id :</p>
+            <input type="number" id="Id" style="width: 200px; height: 25px;">
+            <br>
+            <br>
+            <button id="searchIndUser" style="width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">Search user</button>
+            <p id="indUserRes"></p>
+        </div>
+
+        <!-- Update User -->
+        <div style="margin-top: 40px;padding-left: 10px;">
+            <h2 style="color: black; font-weight: bolder;">Update User</h2>
+
+            <!-- Name -->
+            <div>
+                <button id="updateIndUserName" style="width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">Update User Name</button>
+                <input type="number" id="userId1" placeholder="Enter id" style="display: none; width: 200px; height: 25px;">
+                <br>
+                <input type="text" id="updateNameFeild" placeholder="Enter name" style="display: none; width: 200px; height: 25px;">
+                <br>
+                <button id="updateName" style="display: none; width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">Update name</button>
+                <p id="indUserResName"></p>
+            </div>
+
+            <!-- Email -->
+            <div>
+                <button id="updateIndUserEmail" style="width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">Update User Email</button>
+                <input type="number" id="userId2" placeholder="Enter id" style="display: none; width: 200px; height: 25px;">
+                <br>
+                <input type="text" id="updateEmailFeild" placeholder="Enter email" style="display: none; width: 200px; height: 25px;">
+                <br>
+                <button id="updateEmail" style="display: none; display: none; width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">Update email</button>
+                <p id="indUserResEmail"></p>
+            </div>
+
+            <!-- Address -->
+            <div>
+                <button id="updateIndUserAddress" style="width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">Update User Address</button>
+                <input type="number" id="userId3" placeholder="Enter id" style="display: none; width: 200px; height: 25px;">
+                <br>
+                <input type="text" id="updateAddressFeild" placeholder="Enter address" style="display: none; width: 200px; height: 25px;">
+                <br>
+                <button id="updateAddress" style="display: none; width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">Update address</button>
+                <p id="indUserResAddress"></p>
+            </div>
+
+        </div>
+
+        <!-- Delete User -->
+        <div style="margin-top: 40px;padding-left: 10px;">
+            <h2 style="color: black; font-weight: bolder;">Delete Individual User</h2>
+            <p style="font-weight: bold; font-size: 14px;"> Enter Id :</p>
+            <input type="number" id="deleteId" style="width: 200px; height: 25px;">
+            <br>
+            <br>
+            <button id="deleteIndUser" style="width: 200px; border-radius: 15px; height: 35px; color: white; background-color: black;">Delete user</button>
+            <p id="deleteUserRes"></p>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
